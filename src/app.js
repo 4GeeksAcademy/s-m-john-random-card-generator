@@ -2,10 +2,24 @@
 import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
 window.onload = function() {
   //write your code here
-  console.log("Hello Rigo from the console!");
+  console.log("You see this message everytime the page loads!");
+
+  const suites = ["♥", "♠", "♦", "♣"];
+
+  function randomCard(arr) {
+    return Math.floor(Math.random() * arr.length);
+  }
+
+  let suite = suites[randomCard(suites)];
+  console.log("This is the random suite", suite);
+
+  let topsuite = document.querySelector("#topsuite");
+  topsuite.innerHTML = suite;
+
+  let bottomsuite = document.querySelector("#bottomsuite");
+  bottomsuite.innerHTML = suite;
+
+  // console.log("This is the random number", randomCard(suites));
 };
