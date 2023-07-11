@@ -8,32 +8,44 @@ body {
   width: 300px;
   margin: 30px auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
-}
-
-p {
-  font-size: 72px;
+  position: relative; /* Add this line to make the card container relative */
 }
 
 .topsuite {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding-top: 10px;
   padding-left: 20px;
+  position: absolute; /* Add this line to position the top suite relative to the card */
+  top: 0; /* Adjust this value to position the top suite vertically */
+  left: 0; /* Adjust this value to position the top suite horizontally */
+  font-size: 70px; /* Adjust the font size to scale the suite */
 }
 
 .number {
   display: flex;
   justify-content: center;
+  align-items: center;
+  font-size: 92px;
+  color: black;
+  height: 100%;
+  margin: 0;
 }
 
 .bottomsuite {
   display: flex;
-  justify-content: start;
-  padding-left: 20px;
-}
-
-.rotate {
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  position: absolute; /* Add this line to position the bottom suite relative to the card */
+  bottom: 0; /* Adjust this value to position the bottom suite vertically */
+  right: 15px; /* Adjust this value to position the bottom suite horizontally */
   transform: rotate(180deg);
+  font-size: 70px; /* Adjust the font size to scale the suite */
 }
